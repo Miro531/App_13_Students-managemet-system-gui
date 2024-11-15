@@ -3,6 +3,7 @@ from PyQt6.QtWidgets import QApplication, QLabel, QWidget, QGridLayout, \
 import sys
 from datetime import datetime
 
+
 class AgeCalculator(QWidget):
     def __init__(self):
         super().__init__()
@@ -28,6 +29,7 @@ class AgeCalculator(QWidget):
         grid.addWidget(self.output_label, 3, 0, 1, 2)
 
         self.setLayout(grid)
+
     def calculate_age(self):
         current_year = datetime.now().year
         date_of_birth = self.date_birth_line_edit.text()
